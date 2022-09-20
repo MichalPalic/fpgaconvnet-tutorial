@@ -3,3 +3,5 @@
 lenet.onnx*
 *.png
 outputs/
+.idea
+
