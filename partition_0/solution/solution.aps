@@ -1,0 +1,25 @@
+<AutoPilot:solution xmlns:AutoPilot="com.autoesl.autopilot.solution">
+    <downStreamTool>
+        <DownStreamTool name="vivado"/>
+    </downStreamTool>
+    <clockList>
+        <clock name="default" period="5" default="false"/>
+    </clockList>
+    <config>
+        <config_dataflow default_channel="fifo" fifo_depth="2" strict_mode="warning"/>
+    </config>
+    <name>
+        <value string="solution"/>
+    </name>
+    <project>
+        <value string="partition_0"/>
+    </project>
+    <targetInfo>
+        <TargetInfo value="xc7z045:-ffg900:-2"/>
+    </targetInfo>
+    <libraryList>
+        <library value="xilinx/zynq/zynq" name="DefaultPlatform"/>
+        <library value="xilinx/zynq/zynq_fpv6" name="DefaultPlatform"/>
+    </libraryList>
+</AutoPilot:solution>
+
