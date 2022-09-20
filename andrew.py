@@ -23,6 +23,7 @@ def main():
         "--output-path", "outputs/andrew_opt.json",
         "--backend", "fpgaconvnet",
         "--optimiser", "rule",
+	"--enable_reconf", "false",
         "--objective", "latency"
     ])
 
