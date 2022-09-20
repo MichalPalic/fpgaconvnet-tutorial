@@ -9,7 +9,7 @@ import PIL
 
 def main():
     # load network
-    net = Network("lenet", "models/mnist-12-sim.onnx")
+    net = Network("mnist", "models/mnist-12-sim.onnx")
 
     # load the zedboard platform details
     net.update_platform("platforms/zedboard.json")
