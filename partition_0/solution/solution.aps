@@ -1,10 +1,4 @@
 <AutoPilot:solution xmlns:AutoPilot="com.autoesl.autopilot.solution">
-    <downStreamTool>
-        <DownStreamTool name="vivado"/>
-    </downStreamTool>
-    <clockList>
-        <clock name="default" period="5" default="false"/>
-    </clockList>
     <config>
         <config_dataflow default_channel="fifo" fifo_depth="2" strict_mode="warning"/>
     </config>
@@ -21,5 +15,11 @@
         <library value="xilinx/zynq/zynq" name="DefaultPlatform"/>
         <library value="xilinx/zynq/zynq_fpv6" name="DefaultPlatform"/>
     </libraryList>
+    <downStreamTool>
+        <DownStreamTool name="vivado"/>
+    </downStreamTool>
+    <clockList>
+        <clock default="false" name="default" period="5"/>
+    </clockList>
 </AutoPilot:solution>
 

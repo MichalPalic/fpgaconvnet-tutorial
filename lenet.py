@@ -1,4 +1,4 @@
-from IPython.display import Image 
+#from IPython.display import Image 
 from fpgaconvnet.models.network import Network
 import samo.cli
 from fpgaconvnet.hls.generate.network import GenerateNetwork
