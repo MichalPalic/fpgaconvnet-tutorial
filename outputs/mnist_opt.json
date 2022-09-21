@@ -293,7 +293,7 @@
             "channels_in": 16,
             "rows_out": 1,
             "cols_out": 1,
-            "channels_out": 1,
+            "channels_out": 10,
             "coarse_in": 4,
             "coarse_out": 1,
             "filters": 10,
@@ -302,7 +302,7 @@
             "acc_width": 16,
             "input_width": 16,
             "output_width": 16,
-            "has_bias": 0,
+            "has_bias": 1,
             "biases_width": 16
           },
           "node_in": "Pooling160_Output",
