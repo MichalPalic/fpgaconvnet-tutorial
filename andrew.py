@@ -22,8 +22,8 @@ def main():
         "--platform", "platforms/zedboard.json",
         "--output-path", "outputs/andrew_opt.json",
         "--backend", "fpgaconvnet",
-        "--optimiser", "rule",
-	"--enable_reconf", "false",
+        "--optimiser", "annealing",
+	    "--enable_reconf", "false",
         "--objective", "latency"
     ])
 
