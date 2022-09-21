@@ -20,14 +20,14 @@ def main():
     print(f"predicted resource usage: {net.partitions[0].get_resource_usage()}")
 
     # invoking the CLI from python
-    samo.cli.main([
-        "--model", "models/mnist-12-sim.onnx",
-        "--platform", "platforms/zedboard.json",
-        "--output-path", "outputs/mnist_opt.json",
-        "--backend", "fpgaconvnet",
-        "--optimiser", "rule",
-        "--objective", "latency"
-    ])
+    #samo.cli.main([
+    #    "--model", "models/mnist-12-sim.onnx",
+    #    "--platform", "platforms/zedboard.json",
+    #    "--output-path", "outputs/mnist_opt.json",
+    #    "--backend", "fpgaconvnet",
+    #    "--optimiser", "rule",
+    #    "--objective", "latency"
+    #])
 
     net.load_network("outputs/mnist_opt.json")  # TODO: change name
     net.update_partitions()
