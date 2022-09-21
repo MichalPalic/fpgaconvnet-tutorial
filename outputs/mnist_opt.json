@@ -1,0 +1,317 @@
+{
+  "partition": [
+    {
+      "id": 0,
+      "ports": 1,
+      "batch_size": 1,
+      "input_node": "Input3",
+      "output_node": "Plus214_Output_0",
+      "weights_reloading_factor": 1,
+      "weights_reloading_layer": "Plus214_Output",
+      "layers": [
+        {
+          "name": "Convolution28_Output",
+          "streams_in": [
+            {
+              "name": "in",
+              "coarse": 1
+            }
+          ],
+          "streams_out": [
+            {
+              "name": "Convolution28_Output_ReLU32_Output",
+              "coarse": 1
+            }
+          ],
+          "parameters": {
+            "buffer_depth": 0,
+            "batch_size": 1,
+            "rows_in": 28,
+            "cols_in": 28,
+            "channels_in": 1,
+            "rows_out": 24,
+            "cols_out": 24,
+            "channels_out": 8,
+            "coarse_in": 1,
+            "coarse_out": 1,
+            "coarse_group": 1,
+            "groups": 1,
+            "fine": 25,
+            "filters": 8,
+            "pad_top": 0,
+            "pad_right": 0,
+            "pad_left": 0,
+            "pad_bottom": 0,
+            "kernel_size": [
+              5,
+              5
+            ],
+            "stride": [
+              1,
+              1
+            ],
+            "data_width": 16,
+            "weight_width": 16,
+            "acc_width": 16,
+            "input_width": 16,
+            "output_width": 16,
+            "has_bias": 1,
+            "biases_width": 16
+          },
+          "node_in": "Convolution28_Output",
+          "node_out": "ReLU32_Output",
+          "type": "CONVOLUTION",
+          "weights_path": "Parameter5",
+          "bias_path": "23"
+        },
+        {
+          "name": "ReLU32_Output",
+          "streams_in": [
+            {
+              "name": "Convolution28_Output_ReLU32_Output",
+              "coarse": 1
+            }
+          ],
+          "streams_out": [
+            {
+              "name": "ReLU32_Output_Pooling66_Output",
+              "coarse": 1
+            }
+          ],
+          "parameters": {
+            "buffer_depth": 0,
+            "batch_size": 1,
+            "rows_in": 28,
+            "cols_in": 28,
+            "channels_in": 8,
+            "rows_out": 28,
+            "cols_out": 28,
+            "channels_out": 8,
+            "coarse_in": 1,
+            "coarse_out": 1,
+            "coarse": 1,
+            "data_width": 16
+          },
+          "node_in": "Convolution28_Output",
+          "node_out": "Pooling66_Output",
+          "type": "RELU"
+        },
+        {
+          "name": "Pooling66_Output",
+          "streams_in": [
+            {
+              "name": "ReLU32_Output_Pooling66_Output",
+              "coarse": 1
+            }
+          ],
+          "streams_out": [
+            {
+              "name": "Pooling66_Output_Convolution110_Output",
+              "coarse": 1
+            }
+          ],
+          "parameters": {
+            "buffer_depth": 0,
+            "batch_size": 1,
+            "rows_in": 28,
+            "cols_in": 28,
+            "channels_in": 8,
+            "rows_out": 14,
+            "cols_out": 14,
+            "channels_out": 8,
+            "coarse_in": 1,
+            "coarse_out": 1,
+            "coarse": 1,
+            "pad_top": 0,
+            "pad_right": 0,
+            "pad_left": 0,
+            "pad_bottom": 0,
+            "kernel_size": [
+              2,
+              2
+            ],
+            "stride": [
+              2,
+              2
+            ],
+            "data_width": 16
+          },
+          "node_in": "ReLU32_Output",
+          "node_out": "Convolution110_Output",
+          "type": "POOLING"
+        },
+        {
+          "name": "Convolution110_Output",
+          "streams_in": [
+            {
+              "name": "Pooling66_Output_Convolution110_Output",
+              "coarse": 1
+            }
+          ],
+          "streams_out": [
+            {
+              "name": "Convolution110_Output_ReLU114_Output",
+              "coarse": 4
+            }
+          ],
+          "parameters": {
+            "buffer_depth": 0,
+            "batch_size": 1,
+            "rows_in": 14,
+            "cols_in": 14,
+            "channels_in": 8,
+            "rows_out": 10,
+            "cols_out": 10,
+            "channels_out": 16,
+            "coarse_in": 1,
+            "coarse_out": 4,
+            "coarse_group": 1,
+            "groups": 1,
+            "fine": 25,
+            "filters": 16,
+            "pad_top": 0,
+            "pad_right": 0,
+            "pad_left": 0,
+            "pad_bottom": 0,
+            "kernel_size": [
+              5,
+              5
+            ],
+            "stride": [
+              1,
+              1
+            ],
+            "data_width": 16,
+            "weight_width": 16,
+            "acc_width": 16,
+            "input_width": 16,
+            "output_width": 16,
+            "has_bias": 1,
+            "biases_width": 16
+          },
+          "node_in": "Pooling66_Output",
+          "node_out": "ReLU114_Output",
+          "type": "CONVOLUTION",
+          "weights_path": "Parameter87",
+          "bias_path": "24"
+        },
+        {
+          "name": "ReLU114_Output",
+          "streams_in": [
+            {
+              "name": "Convolution110_Output_ReLU114_Output",
+              "coarse": 4
+            }
+          ],
+          "streams_out": [
+            {
+              "name": "ReLU114_Output_Pooling160_Output",
+              "coarse": 4
+            }
+          ],
+          "parameters": {
+            "buffer_depth": 0,
+            "batch_size": 1,
+            "rows_in": 14,
+            "cols_in": 14,
+            "channels_in": 16,
+            "rows_out": 14,
+            "cols_out": 14,
+            "channels_out": 16,
+            "coarse_in": 4,
+            "coarse_out": 4,
+            "coarse": 4,
+            "data_width": 16
+          },
+          "node_in": "Convolution110_Output",
+          "node_out": "Pooling160_Output",
+          "type": "RELU"
+        },
+        {
+          "name": "Pooling160_Output",
+          "streams_in": [
+            {
+              "name": "ReLU114_Output_Pooling160_Output",
+              "coarse": 4
+            }
+          ],
+          "streams_out": [
+            {
+              "name": "Pooling160_Output_Plus214_Output",
+              "coarse": 4
+            }
+          ],
+          "parameters": {
+            "buffer_depth": 0,
+            "batch_size": 1,
+            "rows_in": 14,
+            "cols_in": 14,
+            "channels_in": 16,
+            "rows_out": 4,
+            "cols_out": 4,
+            "channels_out": 16,
+            "coarse_in": 4,
+            "coarse_out": 4,
+            "coarse": 4,
+            "pad_top": 0,
+            "pad_right": 0,
+            "pad_left": 0,
+            "pad_bottom": 0,
+            "kernel_size": [
+              3,
+              3
+            ],
+            "stride": [
+              3,
+              3
+            ],
+            "data_width": 16
+          },
+          "node_in": "ReLU114_Output",
+          "node_out": "Plus214_Output",
+          "type": "POOLING"
+        },
+        {
+          "name": "Plus214_Output",
+          "streams_in": [
+            {
+              "name": "Pooling160_Output_Plus214_Output",
+              "coarse": 4
+            }
+          ],
+          "streams_out": [
+            {
+              "name": "out",
+              "coarse": 1
+            }
+          ],
+          "parameters": {
+            "buffer_depth": 0,
+            "batch_size": 1,
+            "rows_in": 4,
+            "cols_in": 4,
+            "channels_in": 16,
+            "rows_out": 1,
+            "cols_out": 1,
+            "channels_out": 1,
+            "coarse_in": 4,
+            "coarse_out": 1,
+            "filters": 10,
+            "data_width": 16,
+            "weight_width": 16,
+            "acc_width": 16,
+            "input_width": 16,
+            "output_width": 16,
+            "has_bias": 0,
+            "biases_width": 16
+          },
+          "node_in": "Pooling160_Output",
+          "node_out": "Plus214_Output",
+          "type": "INNER_PRODUCT",
+          "weights_path": "Parameter193_reshape1",
+          "bias_path": "Parameter194"
+        }
+      ]
+    }
+  ]
+}
